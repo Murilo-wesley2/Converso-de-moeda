@@ -26,5 +26,5 @@ while True:
         if eventos==sg.WINDOW_CLOSED:
             break
         if eventos=='Converte':
-            valor=float(cotacao['USDBRL']['bid'])*float(valores['real'])
-            print(valor)
+            valor=loat(valores['real'])/float(cotacao['USDBRL']['bid'])
+            print(f'{valor:.2f}')
