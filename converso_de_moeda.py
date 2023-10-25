@@ -6,7 +6,7 @@ sg.theme('Reddit')
 layout=[
         [sg.Text('Real'),sg.Input(key='real')],
         [sg.Button('Converte')],
-        [sg.Output(size=(10,3),key='saida')]
+        [sg.Text('',key='saida')]
 ]
 
 #Janela
@@ -27,4 +27,4 @@ while True:
             break
         if eventos=='Converte':
             valor=float(valores['real'])/float(cotacao['USDBRL']['bid'])
-            print(f'{valor:.2f}')
+            janela['saida'].update(f'US$ {valor:.2f}')
